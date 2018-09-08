@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>yeet bois</title>
+
+  <meta name="theme-color" content="#22d601" />
+
+  <link rel="icon" type="image/png" href="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/13659971,width=178,height=178/avocado-dab-dabbing.png" />
+
+  <meta charset="utf-8" />
+  <meta name="mobile-web-app-capable" content="no" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta itemprop="name"             content="yeet bois" />
+  <meta name="twitter:title"        content="yeet bois" />
+  <meta property="og:title"         content="yeet bois" />
+
+  <meta itemprop="image"            content="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/13659971,width=178,height=178/avocado-dab-dabbing.png" />
+  <meta name="twitter:image"        content="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/13659971,width=178,height=178/avocado-dab-dabbing.png" />
+  <meta property="og:image"         content="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/13659971,width=178,height=178/avocado-dab-dabbing.png" />
+
+  <meta name="twitter:description"  content="literally tunes m8" />
+  <meta property="og:description"   content="literally tunes m8" />
+  <meta name="description"          content="literally tunes m8" />
+  
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <style>
     body{
@@ -248,7 +271,7 @@ Visualizer.prototype = {
             if (audioContext === null) {
                 return;
             };
-            that._updateInfo('Decoding the audio', true);
+            that._updateInfo('BEEP BOOP', true);
             audioContext.decodeAudioData(fileResult, function(buffer) {
                 that._updateInfo('Decode succussfully,start the visualizer', true);
                 that._visualize(audioContext, buffer);
@@ -336,8 +359,8 @@ Visualizer.prototype = {
             let v = 0
             $('.circle .bar').each(function() {
               const value = array[v * step];
-              $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(${value}px)`)
-              $(this).css('background', `rgba(${value},${255-value},0,1)`)
+              $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(${value+20}px)`)
+              $(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
               v++
             })
             that.animationId = requestAnimationFrame(drawMeter);
@@ -351,11 +374,17 @@ Visualizer.prototype = {
             return;
         };
         this.status = 0;
-        var text = 'HTML5 Audio API showcase | An Audio Viusalizer';
-        document.getElementById('fileWrapper').style.opacity = 1;
+        var text = 'song finish, no u';
         document.getElementById('info').innerHTML = text;
         instance.info = text;
         document.getElementById('uploadedFile').value = '';
+        let v = 0
+        $('.circle .bar').each(function() {
+          const value = array[v * step];
+          $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(20px)`)
+          $(this).css('background', `rgba(0, ${255}, 0, 1)`)
+          v++
+        })
     },
     _updateInfo: function(text, processing) {
         var infoBar = document.getElementById('info'),
