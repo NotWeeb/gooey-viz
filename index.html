@@ -620,12 +620,9 @@ Visualizer.prototype = {
               bgTop2 += 0.2
           
             $('.circleWrapper').css({
-              'transform': `scale(${1 +(array[Math.floor(array.length/2)] / 1000)})`,
-              'filter': `blur(${1 +(array[Math.floor(array.length/2)] / 1000)}px)`
+              'transform': `scale(${1 +(array[Math.floor(array.length/2)] / 600)})`
             })
           
-              $('.backgroundStars').css('filter', `blur(${1 +(array[Math.floor(array.length/2)] / 200)}px)`)
-              $('.backgroundStars2').css('filter', `blur(${1 +(array[Math.floor(array.length/2)] / 200)}px)`)
               $('.backgroundStars').css('transform', `scale(${1 +(array[Math.floor(array.length/2)] / 200)})`)
           console.log(1 +(array[Math.floor(array.length/2)] / 200))
               $('.backgroundStars2').css('transform', `rotate(180deg) scale(${1 +(array[Math.floor(array.length/2)] / 200)})`)
