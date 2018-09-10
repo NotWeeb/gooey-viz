@@ -29,11 +29,30 @@
     body{
       margin:0;
       padding:0;
-      background:#3c3c3c;
+      background-color:#323232;
       overflow:hidden;
     }
+    
+    .backgroundStars{
+      position:absolute;
+      left:0;right:0;top:0;bottom:0;
+      background-image:url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
+      opacity:0.2;
+      transition:transform 0.2s;
+    }
+    .backgroundStars2{
+      position:absolute;
+      left:0;right:0;top:0;bottom:0;
+      background-image:url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
+      opacity:0.4;
+      transform:rotate(180deg);
+      transition:transform 0.6s;
+    }
+    
+    .circle4,
+    .circle3,
+    .circle2,
     .circle{
-      background:#313131;
       height:400px;
       width:400px;
       border-radius:50%;
@@ -42,29 +61,61 @@
       margin:auto;
       transform:rotate(180deg);
     }
+    .circle2{
+      z-index:2;
+    }
+    .circle3{
+      z-index:4;
+    }
+    .circle4{
+      z-index:6;
+    }
+    .circle4 .cont4,
+    .circle3 .cont3,
+    .circle2 .cont2,
     .circle .cont{
       height:400px;
       width:400px;
       filter:url(#fancy-goo);
     }
+    .bar4,
+    .bar3,
+    .bar2,
     .bar{
-      background:#00ff00;
-      width:15px;
       height:300px;
       position:absolute;
       left:0;right:0;bottom:0;top:0;
       margin:auto;
       transform:translateY(20px);
+      width:60px;
+      border-radius:60px;
+      background:#3aa4d7;
+      transition:opacity 0.2s;
+      opacity:0;
     }
+    .bar2{
+      background:#323232;
+      z-index:1000;
+    }
+    .bar3{
+      background:#efefef;
+      z-index:1000;
+    }
+    .bar4{
+      background:#323232;
+      z-index:1000;
+    }
+    .overlayCircle2,
     .overlayCircle{
       position:absolute;
       left:0;right:0;bottom:0;top:0;
       margin:auto;
-      background:#313131;
+      background:#323232;
       z-index:1000;
       width:280px;
       height:280px;
       border-radius:50%;
+      opacity:0;
     }
     #fileWrapper{
       background:#3c3c3c;
@@ -90,10 +141,28 @@
     #fileWrapper input #uploadedFile{
       background:red;
     }
+    #fileWrapper #info {
+      max-width:100%;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      overflow:hidden;
+    }
+    #fileWrapper{
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      overflow:hidden;
+    }
+    .circleWrapper{
+      position:absolute;
+      left:0;right:0;bottom:0;top:0;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  
+  <div class="backgroundStars"></div>
+  <div class="backgroundStars2"></div>
   
   <div id="fileWrapper" class="file_wrapper">
     <div id="info"></div>
@@ -102,6 +171,193 @@
   
   <div id="visualizer_wrapper">
     <canvas id='canvas' width="800" height="350"></canvas>
+  </div>
+  <div class="circleWrapper">
+  
+  <div class="circle4">
+    <div class="overlayCircle4"></div>
+    <div class="cont4">
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+      <div class="bar4"></div>
+    </div>
+  </div>
+  
+  <div class="circle3">
+    <div class="overlayCircle3"></div>
+    <div class="cont3">
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+  
+  <div class="circle2">
+    <div class="overlayCircle2"></div>
+    <div class="cont2">
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+      <div class="bar2"></div>
+    </div>
   </div>
   
   <div class="circle">
@@ -165,6 +421,7 @@
       <div class="bar"></div>
     </div>
   </div>
+  </div>
   
   <script>
     const barCount = $('.circle .bar').length
@@ -173,6 +430,9 @@
       $(this).css('transform', `rotate(${360/barCount*x}deg)`)
       x++
     })
+    
+    let bgTop = 0
+    let bgTop2 = 0
     
 window.onload = function() {
     new Visualizer().ini();
@@ -353,14 +613,57 @@ Visualizer.prototype = {
                     return;
                 };
             };
-            var step = Math.round(array.length / meterNum); //sample limited data from the total array
+            var step = Math.round(array.length / barCount); //sample limited data from the total array
             ctx.clearRect(0, 0, cwidth, cheight);
+          
+              bgTop += 0.2
+              bgTop2 += 0.2
+          
+            $('.circleWrapper').css({
+              'transform': `scale(${1 +(array[Math.floor(array.length/2)] / 1000)})`,
+              'filter': `blur(${1 +(array[Math.floor(array.length/2)] / 1000)}px)`
+            })
+          
+              $('.backgroundStars').css('filter', `blur(${1 +(array[Math.floor(array.length/2)] / 200)}px)`)
+              $('.backgroundStars2').css('filter', `blur(${1 +(array[Math.floor(array.length/2)] / 200)}px)`)
+              $('.backgroundStars').css('transform', `scale(${1 +(array[Math.floor(array.length/2)] / 200)})`)
+          console.log(1 +(array[Math.floor(array.length/2)] / 200))
+              $('.backgroundStars2').css('transform', `rotate(180deg) scale(${1 +(array[Math.floor(array.length/2)] / 200)})`)
+              $('.backgroundStars').css('background-position', `0 ${bgTop2}%`)
+              $('.backgroundStars2').css('background-position', `0 ${bgTop2}%`)
 
+            let v4 = 0
+            $('.circle4 .bar4').each(function() {
+              const value = array[v4];
+              $(this).css('transform', `rotate(${360/barCount*v4}deg) translateY(${value-40}px)`)
+              //$(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+              $(this).css('opacity', (value<1)?0:1)
+              v4++
+            })
+            let v3 = 0
+            $('.circle3 .bar3').each(function() {
+              const value = array[v3];
+              $(this).css('transform', `rotate(${360/barCount*v3}deg) translateY(${value-20}px)`)
+              //$(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+              $(this).css('opacity', (value<1)?0:1)
+              v3++
+            })
+            let v2 = 0
+            $('.circle2 .bar2').each(function() {
+              const value = array[v2];
+              $(this).css('transform', `rotate(${360/barCount*v2}deg) translateY(${value}px)`)
+              //$(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+              $(this).css('opacity', (value<1)?0:1)
+              v2++
+            })
+          
             let v = 0
             $('.circle .bar').each(function() {
-              const value = array[v * step];
-              $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(${value+20}px)`)
-              $(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+              const value = array[v];
+              $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(${value+4}px)`)
+              //$(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+              $(this).css('opacity', (value<1)?0:1)
+              $('.bar').css('background', `rgba(${value + 50}, 50, 50, 1)`)
               v++
             })
             that.animationId = requestAnimationFrame(drawMeter);
@@ -378,11 +681,18 @@ Visualizer.prototype = {
         document.getElementById('info').innerHTML = text;
         instance.info = text;
         document.getElementById('uploadedFile').value = '';
+        let v2 = 0
+        $('.circle2 .bar2').each(function() {
+          const value = array[v2 * step];
+          $(this).css('transform', `rotate(${360/barCount*v2}deg) translateY(0px)`)
+          //$(this).css('background', `rgba(0, ${255-value}, ${value+(value*0.6)}, 1)`)
+          v2++
+        })
         let v = 0
         $('.circle .bar').each(function() {
           const value = array[v * step];
           $(this).css('transform', `rotate(${360/barCount*v}deg) translateY(20px)`)
-          $(this).css('background', `rgba(0, ${255}, 0, 1)`)
+          //$(this).css('background', `rgba(0, ${255}, 0, 1)`)
           v++
         })
     },
@@ -413,7 +723,7 @@ Visualizer.prototype = {
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
     <defs>
       <filter id="fancy-goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
         <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
       </filter>
