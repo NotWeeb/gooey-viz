@@ -26,135 +26,135 @@
   
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      padding:0;
-      background-color:#323232;
-      overflow:hidden;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #323232;
+      overflow: hidden;
     }
     
-    .backgroundStars{
-      position:absolute;
-      left:0;right:0;top:0;bottom:0;
-      background-image:url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
-      opacity:0.2;
-      transition:transform 0.2s;
+    .backgroundStars {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      background-image: url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
+      opacity: 0.2;
+      transition: transform 0.2s;
     }
-    .backgroundStars2{
-      position:absolute;
-      left:0;right:0;top:0;bottom:0;
-      background-image:url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
-      opacity:0.4;
-      transform:rotate(180deg);
-      transition:transform 0.6s;
+    .backgroundStars2 {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      background-image: url(http://www.pngmart.com/files/3/Star-PNG-Pic.png);
+      opacity: 0.4;
+      transform: rotate(180deg);
+      transition: transform 0.6s;
     }
     
     .circle4,
     .circle3,
     .circle2,
-    .circle{
-      height:400px;
-      width:400px;
-      border-radius:50%;
-      position:absolute;
-      left:0;right:0;bottom:0;top:0;
-      margin:auto;
-      transform:rotate(180deg);
+    .circle {
+      height: 400px;
+      width: 400px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      margin: auto;
+      transform: rotate(180deg);
     }
-    .circle2{
-      z-index:2;
+    .circle2 {
+      z-index: 2;
     }
-    .circle3{
-      z-index:4;
+    .circle3 {
+      z-index: 4;
     }
-    .circle4{
-      z-index:6;
+    .circle4 {
+      z-index: 6;
     }
     .circle4 .cont4,
     .circle3 .cont3,
     .circle2 .cont2,
-    .circle .cont{
-      height:400px;
-      width:400px;
-      filter:url(#fancy-goo);
+    .circle .cont {
+      height: 400px;
+      width: 400px;
+      filter: url(#fancy-goo);
     }
     .bar4,
     .bar3,
     .bar2,
-    .bar{
-      height:300px;
-      position:absolute;
-      left:0;right:0;bottom:0;top:0;
-      margin:auto;
-      transform:translateY(20px);
-      width:60px;
-      border-radius:60px;
-      background:#3aa4d7;
-      transition:opacity 0.2s;
-      opacity:0;
+    .bar {
+      height: 300px;
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      margin: auto;
+      transform: translateY(20px);
+      width: 60px;
+      border-radius: 60px;
+      background: #3aa4d7;
+      transition: opacity 0.2s;
+      opacity: 0;
     }
-    .bar2{
-      background:#323232;
-      z-index:1000;
+    .bar2 {
+      background: #323232;
+      z-index: 1000;
     }
-    .bar3{
-      background:#efefef;
-      z-index:1000;
+    .bar3 {
+      background: #efefef;
+      z-index: 1000;
     }
-    .bar4{
-      background:#323232;
-      z-index:1000;
+    .bar4 {
+      background :#323232;
+      z-index: 1000;
     }
     .overlayCircle2,
-    .overlayCircle{
-      position:absolute;
-      left:0;right:0;bottom:0;top:0;
-      margin:auto;
-      background:#323232;
-      z-index:1000;
-      width:280px;
-      height:280px;
-      border-radius:50%;
-      opacity:0;
+    .overlayCircle {
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      margin: auto;
+      background: #323232;
+      z-index: 1000;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      opacity: 0;
     }
-    #fileWrapper{
-      background:#3c3c3c;
-      position:absolute;
-      left:0;right:0;bottom:0;top:0;
-      margin:auto;
-      width:200px;
-      z-index:100000;
-      height:60px;
-      border-radius:10px;
-      padding:10px;
-      color:white;
-      box-shadow:0 4px 10px 0 rgba(0,0,0,0.1);
-    }
-    #fileWrapper #info{
-      font-family:'Montserrat', sans-serif;
-      text-align:center;
-      margin-bottom:15px;
-    }
-    #fileWrapper input{
-      font-family:'Montserrat', sans-serif;
-    }
-    #fileWrapper input #uploadedFile{
-      background:red;
+    #fileWrapper {
+      background: #3c3c3c;
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      margin: auto;
+      width: 200px;
+      z-index: 100000;
+      height: 60px;
+      border-radius: 10px;
+      padding: 10px;
+      color: white;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1);
     }
     #fileWrapper #info {
-      max-width:100%;
-      white-space:nowrap;
-      text-overflow:ellipsis;
-      overflow:hidden;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin-bottom: 15px;
     }
-    #fileWrapper{
-      white-space:nowrap;
-      text-overflow:ellipsis;
-      overflow:hidden;
+    #fileWrapper input {
+      font-family: 'Montserrat', sans-serif;
     }
-    .circleWrapper{
-      position:absolute;
-      left:0;right:0;bottom:0;top:0;
+    #fileWrapper input #uploadedFile {
+      background: red;
+    }
+    #fileWrapper #info {
+      max-width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    #fileWrapper {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .circleWrapper {
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
